@@ -1,6 +1,6 @@
 extends CharacterBody2D
 @export var bullets_path: NodePath
-@onready var bullets_container = get_node(bullets_path)
+@onready var bullets_container: Node = get_node(bullets_path)
 
 @export var speed := 300.0
 @export var bullet_scene: PackedScene
@@ -21,7 +21,7 @@ func _process(delta):
 	if Input.is_action_pressed("ui_accept") and cooldown <= 0:
 		shoot()
 		cooldown = fire_rate
-	var direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	var direction: Vector2 = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	velocity = direction * speed
 	move_and_slide()
 
@@ -30,15 +30,15 @@ func _physics_process(_delta):
 	pass
 
 
-func shoot():
-	var bullet = bullet_scene.instantiate()
+func shoot() -> void:
+	var bullet: Node = bullet_scene.instantiate()
 	bullet.global_position = global_position
 	bullet.direction = compute_direction_vector()
 	bullet.bullet_type = bullet.BulletType.PLAYER
 	bullets_container.add_child(bullet)
 
 
-func compute_direction_vector():
+func compute_direction_vector() -> Vector2:
 	var mouse_pos = get_global_mouse_position()
 	var direction = (mouse_pos - global_position).normalized()
 	return direction

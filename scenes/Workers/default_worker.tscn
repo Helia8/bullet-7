@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cof7hd53qqgg6"]
+
+[ext_resource type="Script" uid="uid://rrab00ifsxm7" path="res://src/Workers/DefaultWorker.gd" id="1_op575"]
+[ext_resource type="Texture2D" uid="uid://df7yu2su1uqcx" path="res://assets/temp_worker.png" id="2_81xdg"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_op575"]
+radius = 78.0
+height = 252.0
+
+[node name="DefaultWorker" type="CharacterBody2D" unique_id=2079299972]
+script = ExtResource("1_op575")
+metadata/_custom_type_script = "uid://cn208ny4ljfn4"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=920495663]
+shape = SubResource("CapsuleShape2D_op575")
+
+[node name="TempWorker" type="Sprite2D" parent="." unique_id=1937157498]
+position = Vector2(1, 2)
+texture = ExtResource("2_81xdg")

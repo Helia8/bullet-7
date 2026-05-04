@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c8rhe3s01lg77" path="res://scenes/WorkStations/DefaultWorkStation.tscn" id="5_o21ul"]
 [ext_resource type="PackedScene" uid="uid://qjwbnsucsc33" path="res://scenes/Interactables/Door.tscn" id="6_y368g"]
 [ext_resource type="PackedScene" uid="uid://bfuivtfate2mm" path="res://scenes/Levels/level_2.tscn" id="7_l5ivm"]
+[ext_resource type="PackedScene" uid="uid://cof7hd53qqgg6" path="res://scenes/Workers/default_worker.tscn" id="8_l5ivm"]
 
 [node name="Level1" type="Node2D" unique_id=1897336495]
 script = ExtResource("1_vn7o3")
@@ -53,3 +54,6 @@ position = Vector2(2778, 2335)
 [node name="Door" parent="." unique_id=192984226 instance=ExtResource("6_y368g")]
 position = Vector2(4373, 2464)
 next_level = ExtResource("7_l5ivm")
+
+[node name="DefaultWorker" parent="." unique_id=2079299972 instance=ExtResource("8_l5ivm")]
+position = Vector2(3437, 2288)
