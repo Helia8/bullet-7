@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://cf1yl415jvgvg"]
+
+[ext_resource type="Script" uid="uid://nds5shxeohgi" path="res://src/Interfaces/ILevel.gd" id="1_0n1tn"]
+[ext_resource type="Texture2D" uid="uid://776nc40r4mw7" path="res://assets/game_main.png" id="2_oox4p"]
+[ext_resource type="PackedScene" uid="uid://d1qk5afk6exhw" path="res://scenes/player.tscn" id="3_k2uud"]
+
+[node name="Level" type="Node2D" unique_id=917201245]
+script = ExtResource("1_0n1tn")
+
+[node name="Environment" type="Node2D" parent="." unique_id=1884710223]
+
+[node name="GameRoom" type="Sprite2D" parent="Environment" unique_id=1943032814]
+position = Vector2(563, 315)
+scale = Vector2(0.41345772, 0.5331797)
+texture = ExtResource("2_oox4p")
+
+[node name="WallsCollisionBody" type="StaticBody2D" parent="Environment" unique_id=1744656742]
+
+[node name="WallCollision" type="CollisionPolygon2D" parent="Environment/WallsCollisionBody" unique_id=295335115]
+build_mode = 1
+polygon = PackedVector2Array(290, 127, 268, 596, 785, 599, 926, 178, 286, 116)
+
+[node name="Bullets" type="Node2D" parent="." unique_id=1929042630]
+
+[node name="Entities" type="Node2D" parent="." unique_id=1685865102]
+
+[node name="PlayerCharacter" parent="Entities" unique_id=1977532338 instance=ExtResource("3_k2uud")]
+position = Vector2(539, 350)
+bullets_path = NodePath("../../Bullets")

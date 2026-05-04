@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://bfuivtfate2mm"]
+
+[ext_resource type="Script" uid="uid://72tvffnmsdqa" path="res://src/Levels/level_2.gd" id="1_04sgr"]
+[ext_resource type="Texture2D" uid="uid://776nc40r4mw7" path="res://assets/game_main.png" id="2_pyh4d"]
+[ext_resource type="PackedScene" uid="uid://d1qk5afk6exhw" path="res://scenes/player.tscn" id="3_3s172"]
+[ext_resource type="PackedScene" uid="uid://0ct86ofnipqt" path="res://scenes/Ennemies/DefaultEnnemy.tscn" id="4_enemy"]
+
+[node name="Level1" type="Node2D" unique_id=1897336495]
+script = ExtResource("1_04sgr")
+metadata/_custom_type_script = "uid://nds5shxeohgi"
+
+[node name="Environment" type="Node2D" parent="." unique_id=2098926192]
+
+[node name="GameRoom" type="Sprite2D" parent="Environment" unique_id=1878148595]
+position = Vector2(429.625, 271.375)
+scale = Vector2(0.30756253, 0.45276496)
+texture = ExtResource("2_pyh4d")
+
+[node name="WallsCollisionBody" type="StaticBody2D" parent="Environment" unique_id=1334812216]
+
+[node name="WallCollision" type="CollisionPolygon2D" parent="Environment/WallsCollisionBody" unique_id=1066212040]
+build_mode = 1
+polygon = PackedVector2Array(290, 127, 268, 596, 785, 599, 926, 178, 286, 116)
+
+[node name="Bullets" type="Node2D" parent="." unique_id=1730278363]
+
+[node name="Entities" type="Node2D" parent="." unique_id=506129163]
+
+[node name="PlayerCharacter" parent="Entities" unique_id=1977532338 instance=ExtResource("3_3s172")]
+position = Vector2(539, 350)
+bullets_path = NodePath("../../Bullets")
+
+[node name="Enemy1" parent="Entities" unique_id=100000001 instance=ExtResource("4_enemy")]
+position = Vector2(320, 200)
+
+[node name="Enemy2" parent="Entities" unique_id=100000002 instance=ExtResource("4_enemy")]
+position = Vector2(720, 200)

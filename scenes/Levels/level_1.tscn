@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://bn15n70pu3nlb"]
+
+[ext_resource type="Script" uid="uid://daq7sbg38d6tp" path="res://src/Levels/level_1.gd" id="1_vn7o3"]
+[ext_resource type="PackedScene" uid="uid://d1qk5afk6exhw" path="res://scenes/player.tscn" id="3_kx6l7"]
+[ext_resource type="PackedScene" uid="uid://0ct86ofnipqt" path="res://scenes/Ennemies/DefaultEnnemy.tscn" id="4_enemy"]
+[ext_resource type="Texture2D" uid="uid://bhbflrp2a61my" path="res://assets/temp_mainroom.png" id="5_fkdrv"]
+
+[node name="Level1" type="Node2D" unique_id=1897336495]
+script = ExtResource("1_vn7o3")
+metadata/_custom_type_script = "uid://nds5shxeohgi"
+
+[node name="Environment" type="Node2D" parent="." unique_id=2098926192]
+
+[node name="TempMainroom" type="Sprite2D" parent="Environment" unique_id=3513898]
+position = Vector2(3338, 2366)
+texture = ExtResource("5_fkdrv")
+
+[node name="WallsCollisionBody" type="StaticBody2D" parent="Environment" unique_id=1334812216]
+collision_layer = 9
+
+[node name="WallCollision" type="CollisionPolygon2D" parent="Environment/WallsCollisionBody" unique_id=1066212040]
+position = Vector2(2829, 1852)
+build_mode = 1
+polygon = PackedVector2Array(-483, 19, -499, 1408, 1493, 1411, 1491, 28, 736, 11, 145, 24)
+
+[node name="Bullets" type="Node2D" parent="." unique_id=1730278363]
+
+[node name="Entities" type="Node2D" parent="." unique_id=506129163]
+
+[node name="PlayerCharacter" parent="Entities" unique_id=1977532338 instance=ExtResource("3_kx6l7")]
+position = Vector2(3249, 2710)
+bullets_path = NodePath("../../Bullets")
+speed = 400.0
+fire_rate = 0.5
+
+[node name="Enemy1" parent="Entities" unique_id=100000001 instance=ExtResource("4_enemy")]
+position = Vector2(3778, 2481)
+speed = 300.0
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1363752646]
+position = Vector2(3305, 2354)
+zoom = Vector2(0.3, 0.25)

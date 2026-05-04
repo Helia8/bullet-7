@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://0ct86ofnipqt"]
+
+[ext_resource type="Script" uid="uid://bjr35mfqsf6mw" path="res://src/Ennemies/DefaultEnnemy.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://dtu23no0tt3ql" path="res://assets/temp_enemy.png" id="2_cjt04"]
+[ext_resource type="PackedScene" uid="uid://cjf3fwnp2m6bb" path="res://scenes/bullet.tscn" id="3_bullet"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_shape1"]
+size = Vector2(121, 205)
+
+[node name="DefaultEnnemy" type="CharacterBody2D" unique_id=2139805107]
+collision_layer = 2
+script = ExtResource("1_script")
+max_health = 5
+speed = 80.0
+bullet_scene = ExtResource("3_bullet")
+
+[node name="EnemyCollision" type="CollisionShape2D" parent="." unique_id=2139805108]
+position = Vector2(-1, 1)
+shape = SubResource("RectangleShape2D_shape1")
+
+[node name="TempEnemy" type="Sprite2D" parent="." unique_id=848444024]
+position = Vector2(-1, 0)
+texture = ExtResource("2_cjt04")
