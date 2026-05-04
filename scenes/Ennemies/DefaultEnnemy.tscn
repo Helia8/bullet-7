@@ -8,6 +8,7 @@
 size = Vector2(121, 205)
 
 [node name="DefaultEnnemy" type="CharacterBody2D" unique_id=2139805107]
+z_index = 2
 collision_layer = 2
 script = ExtResource("1_script")
 max_health = 5

@@ -9,6 +9,7 @@ radius = 62.0
 height = 216.0
 
 [node name="PlayerCharacter" type="CharacterBody2D" unique_id=1977532338]
+z_index = 2
 collision_mask = 8
 script = ExtResource("1_qhqgy")
 bullet_scene = ExtResource("2_dqkch")

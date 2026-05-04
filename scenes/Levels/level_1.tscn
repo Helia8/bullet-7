@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://d1qk5afk6exhw" path="res://scenes/player.tscn" id="3_kx6l7"]
 [ext_resource type="PackedScene" uid="uid://0ct86ofnipqt" path="res://scenes/Ennemies/DefaultEnnemy.tscn" id="4_enemy"]
 [ext_resource type="Texture2D" uid="uid://bhbflrp2a61my" path="res://assets/temp_mainroom.png" id="5_fkdrv"]
+[ext_resource type="PackedScene" uid="uid://c8rhe3s01lg77" path="res://scenes/WorkStations/DefaultWorkStation.tscn" id="5_o21ul"]
 
 [node name="Level1" type="Node2D" unique_id=1897336495]
 script = ExtResource("1_vn7o3")
@@ -40,3 +41,6 @@ speed = 300.0
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1363752646]
 position = Vector2(3305, 2354)
 zoom = Vector2(0.3, 0.25)
+
+[node name="DefaultWorkStation" parent="." unique_id=1275117266 instance=ExtResource("5_o21ul")]
+position = Vector2(2778, 2335)
