@@ -4,6 +4,7 @@ extends Node2D
 var current_Level: ILevel
 
 func _ready():
+	add_to_group("main")
 	load_level(level_scene)
 
 func _process(delta):

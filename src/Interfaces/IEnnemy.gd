@@ -14,6 +14,7 @@ func set_bullet_container(container):
 
 func _ready() -> void:
 	health = max_health
+	add_to_group("enemies")
 
 
 func _process(delta: float) -> void:

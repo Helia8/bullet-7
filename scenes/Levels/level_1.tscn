@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://0ct86ofnipqt" path="res://scenes/Ennemies/DefaultEnnemy.tscn" id="4_enemy"]
 [ext_resource type="Texture2D" uid="uid://bhbflrp2a61my" path="res://assets/temp_mainroom.png" id="5_fkdrv"]
 [ext_resource type="PackedScene" uid="uid://c8rhe3s01lg77" path="res://scenes/WorkStations/DefaultWorkStation.tscn" id="5_o21ul"]
+[ext_resource type="PackedScene" uid="uid://qjwbnsucsc33" path="res://scenes/Interactables/Door.tscn" id="6_y368g"]
+[ext_resource type="PackedScene" uid="uid://bfuivtfate2mm" path="res://scenes/Levels/level_2.tscn" id="7_l5ivm"]
 
 [node name="Level1" type="Node2D" unique_id=1897336495]
 script = ExtResource("1_vn7o3")
@@ -29,12 +31,14 @@ polygon = PackedVector2Array(-483, 19, -499, 1408, 1493, 1411, 1491, 28, 736, 11
 [node name="Entities" type="Node2D" parent="." unique_id=506129163]
 
 [node name="PlayerCharacter" parent="Entities" unique_id=1977532338 instance=ExtResource("3_kx6l7")]
+z_index = 0
 position = Vector2(3249, 2710)
 bullets_path = NodePath("../../Bullets")
 speed = 400.0
 fire_rate = 0.5
 
 [node name="Enemy1" parent="Entities" unique_id=100000001 instance=ExtResource("4_enemy")]
+z_index = 0
 position = Vector2(3778, 2481)
 speed = 300.0
 
@@ -43,4 +47,9 @@ position = Vector2(3305, 2354)
 zoom = Vector2(0.3, 0.25)
 
 [node name="DefaultWorkStation" parent="." unique_id=1275117266 instance=ExtResource("5_o21ul")]
+z_index = 0
 position = Vector2(2778, 2335)
+
+[node name="Door" parent="." unique_id=192984226 instance=ExtResource("6_y368g")]
+position = Vector2(4373, 2464)
+next_level = ExtResource("7_l5ivm")
