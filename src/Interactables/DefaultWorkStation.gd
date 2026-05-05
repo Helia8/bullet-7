@@ -9,6 +9,7 @@ extends IWorkStation
 func _ready() -> void:
 	if station_texture:
 		_sprite.texture = station_texture
+		_sprite.z_index = 0
 
 	var shape := CircleShape2D.new()
 	shape.radius = interaction_radius
