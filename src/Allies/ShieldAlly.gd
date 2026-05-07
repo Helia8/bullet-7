@@ -26,7 +26,7 @@ func _process(delta: float) -> void:
 		wander_direction = Vector2(randf_range(-1, 1), randf_range(-1, 1)).normalized()
 		time_since_last_direction_change = 0.0
 	move()
-	if Input.is_action_pressed("ui_accept") and time_since_last_ability >= cooldown:
+	if Input.is_action_pressed("skill1") and time_since_last_ability >= cooldown:
 		use_ability(delta)
 		time_since_last_ability = 0.0
 	pass

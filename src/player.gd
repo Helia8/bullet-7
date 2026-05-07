@@ -18,10 +18,10 @@ func _ready() -> void:
 func _process(delta):
 	cooldown -= delta
 
-	if Input.is_action_pressed("ui_accept") and cooldown <= 0:
+	if Input.is_action_pressed("shoot") and cooldown <= 0:
 		shoot()
 		cooldown = fire_rate
-	var direction: Vector2 = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	var direction: Vector2 = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	velocity = direction * speed
 	move_and_slide()
 
