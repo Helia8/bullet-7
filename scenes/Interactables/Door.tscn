@@ -16,7 +16,7 @@ visible = false
 texture = ExtResource("2_smxra")
 
 [node name="OpenSprite" type="Sprite2D" parent="." unique_id=1855607189]
-position = Vector2(0, -43)
+position = Vector2(8, -567)
 texture = ExtResource("3_smxra")
 
 [node name="DoorCollision" type="CollisionShape2D" parent="." unique_id=2070778006]
