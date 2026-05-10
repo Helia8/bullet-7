@@ -4,31 +4,30 @@ const ENEMY_SCENE = preload("res://scenes/Ennemies/DefaultEnnemy.tscn")
 const DOOR_SCENE = preload("res://scenes/Interactables/Door.tscn")
 const ALLY_WS_SCENE = preload("res://scenes/Interactables/AllyWorkStation.tscn")
 const SHIELD_ALLY_SCENE = preload("res://scenes/Allies/ShieldAlly.tscn")
-const LEVEL_3_SCENE = preload("res://scenes/Levels/level_3.tscn")
 
 @onready var bullets = $Bullets
 @onready var player = $Entities/PlayerCharacter
-
-const BASE_XP: int = 150
+const BASE_XP: int = 200
 const XP_PER_QUOTA: int = 10
 
 var _wave_manager: WaveManager
 
 
 func _ready() -> void:
-	for child in $Entities.get_children():
-		if child is IEnnemy:
-			child.set_process(false)
-			child.set_physics_process(false)
-			child.queue_free()
 	var door = DOOR_SCENE.instantiate()
-	door.next_level = LEVEL_3_SCENE
+	door.next_level = null
 	door.position = Vector2(880, 500)
 	$Entities.add_child(door)
-	var ws = ALLY_WS_SCENE.instantiate()
-	ws.ally_scene = SHIELD_ALLY_SCENE
-	ws.position = Vector2(500, 350)
-	$Entities.add_child(ws)
+
+	var ws1 = ALLY_WS_SCENE.instantiate()
+	ws1.ally_scene = SHIELD_ALLY_SCENE
+	ws1.position = Vector2(400, 300)
+	$Entities.add_child(ws1)
+
+	var ws2 = ALLY_WS_SCENE.instantiate()
+	ws2.ally_scene = SHIELD_ALLY_SCENE
+	ws2.position = Vector2(700, 300)
+	$Entities.add_child(ws2)
 
 	var wave1 = [
 		{"scene": ENEMY_SCENE, "pos": Vector2(350, 175)},
@@ -41,10 +40,17 @@ func _ready() -> void:
 		{"scene": ENEMY_SCENE, "pos": Vector2(700, 200)},
 		{"scene": ENEMY_SCENE, "pos": Vector2(850, 350)},
 	]
+	var wave3 = [
+		{"scene": ENEMY_SCENE, "pos": Vector2(320, 175)},
+		{"scene": ENEMY_SCENE, "pos": Vector2(480, 200)},
+		{"scene": ENEMY_SCENE, "pos": Vector2(640, 175)},
+		{"scene": ENEMY_SCENE, "pos": Vector2(800, 200)},
+		{"scene": ENEMY_SCENE, "pos": Vector2(560, 350)},
+	]
 
 	_wave_manager = WaveManager.new()
 	add_child(_wave_manager)
-	_wave_manager.waves = [wave1, wave2]
+	_wave_manager.waves = [wave1, wave2, wave3]
 	_wave_manager.kill_registered.connect(_on_kill_registered)
 	_wave_manager.all_waves_complete.connect(_on_all_waves_complete)
 	_wave_manager.start(bullets, $Entities, null)

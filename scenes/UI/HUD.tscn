@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://b6l2rutlvios1"]
+
+[ext_resource type="Script" uid="uid://crdm06kw5drti" path="res://src/UI/HUD.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://vthwgdhkeit8" path="res://assets/ui/ui_health0.png" id="2_tohwf"]
+[ext_resource type="Texture2D" uid="uid://eqvv4fhg6q0q" path="res://assets/ui/ui_health1.png" id="3_e8ns6"]
+[ext_resource type="Texture2D" uid="uid://dwtvi1jbdb6lb" path="res://assets/ui/ui_health2-frame-1.png" id="4_m51yh"]
+[ext_resource type="Texture2D" uid="uid://d0tfmq4w8k851" path="res://assets/ui/ui_health3-frame-1.png" id="5_8d6le"]
+[ext_resource type="Texture2D" uid="uid://dtaacnqxekjem" path="res://assets/ui/ui_health4.png" id="6_l13vl"]
+[ext_resource type="Texture2D" uid="uid://c6y4ynug3eq63" path="res://assets/ui/ui_xp0.png" id="7_663ec"]
+[ext_resource type="Texture2D" uid="uid://b7b1gsjd75m0o" path="res://assets/ui/ui_xp1-frame1.png" id="8_kxwrb"]
+[ext_resource type="Texture2D" uid="uid://ddy0ui83ol88v" path="res://assets/ui/ui_xp2-frame1.png" id="9_o1axb"]
+[ext_resource type="Texture2D" uid="uid://dgwmir8mlae84" path="res://assets/ui/ui_xp3-frame3.png" id="10_i5pcr"]
+
+[node name="HUD" type="CanvasLayer" unique_id=807937075]
+script = ExtResource("1")
+hp_textures = Array[Texture2D]([ExtResource("6_l13vl"), ExtResource("6_l13vl"), ExtResource("5_8d6le"), ExtResource("4_m51yh"), ExtResource("3_e8ns6"), ExtResource("2_tohwf")])
+xp_textures = Array[Texture2D]([ExtResource("7_663ec"), ExtResource("8_kxwrb"), ExtResource("9_o1axb"), ExtResource("10_i5pcr")])
+
+[node name="HP" type="Node2D" parent="." unique_id=286446436]
+position = Vector2(552, 1022)
+
+[node name="HpSprite" type="Sprite2D" parent="HP" unique_id=1424803260]
+
+[node name="XP" type="Node2D" parent="." unique_id=485764445]
+position = Vector2(1339, 1019)
+
+[node name="XpSprite" type="Sprite2D" parent="XP" unique_id=2069937023]
+
+[node name="Gold" type="Node2D" parent="." unique_id=1759732260]
+position = Vector2(1700, 60)
+
+[node name="GoldLabel" type="Label" parent="Gold" unique_id=1977551537]
+text = "$ 0"
+
+[node name="Quota" type="Node2D" parent="." unique_id=348413612]
+position = Vector2(60, 940)
+
+[node name="KillsLabel" type="Label" parent="Quota" unique_id=959923474]
+text = "Kills: 0"
+
+[node name="JobsLabel" type="Label" parent="Quota" unique_id=1013431917]
+offset_top = 35.0
+offset_bottom = 35.0
+text = "Jobs: 0"
+
+[node name="QuotaLabel" type="Label" parent="Quota" unique_id=199551321]
+offset_top = 70.0
+offset_bottom = 70.0
+text = "Quota: 0"

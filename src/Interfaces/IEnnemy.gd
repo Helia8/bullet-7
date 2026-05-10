@@ -1,6 +1,7 @@
 extends CharacterBody2D
 class_name IEnnemy
 
+signal died
 
 @export var max_health: int
 @export var speed: float
@@ -9,14 +10,19 @@ class_name IEnnemy
 var health := 0
 var bullet_container = null
 var player_ref: Node2D = null
-var items : Node2D
-func set_bullet_container(container):
+var items: Node2D = null
+
+func set_bullet_container(container) -> void:
 	bullet_container = container
+
+func set_items_container(container: Node2D) -> void:
+	items = container
 
 func _ready() -> void:
 	health = max_health
 	add_to_group("enemies")
-	items = get_node(item_path)
+	if item_path and not item_path.is_empty():
+		items = get_node(item_path)
 
 func _process(delta: float) -> void:
 	pass

@@ -11,6 +11,7 @@ var _is_open: bool = false
 
 
 func _ready() -> void:
+	add_to_group("door")
 	if closed_texture:
 		_closed_sprite.texture = closed_texture
 	if open_texture:
@@ -19,12 +20,12 @@ func _ready() -> void:
 	body_entered.connect(_on_body_entered)
 
 
-func _process(_delta: float) -> void:
-	var no_enemies = get_tree().get_nodes_in_group("enemies").is_empty()
-	if no_enemies != _is_open:
-		_is_open = no_enemies
-		_closed_sprite.visible = not _is_open
-		_open_sprite.visible = _is_open
+func open() -> void:
+	if _is_open:
+		return
+	_is_open = true
+	_closed_sprite.visible = false
+	_open_sprite.visible = true
 
 
 func _on_body_entered(body: Node2D) -> void:
@@ -35,8 +36,10 @@ func _on_body_entered(body: Node2D) -> void:
 
 
 func _go_to_next_level() -> void:
-	if next_level == null:
-		return
 	var main = get_tree().get_first_node_in_group("main")
-	if main:
+	if not main:
+		return
+	if next_level == null:
+		main.show_win_screen()
+	else:
 		main.load_level(next_level)

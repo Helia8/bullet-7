@@ -6,7 +6,7 @@ extends IItem
 func pickup(player: Node2D) -> void:
     print("player picked up coffee")
     var fire_rate = player.get_fire_rate()
-    fire_rate *= 0.5
+    fire_rate *= 0.2
     player.set_fire_rate(fire_rate)
     queue_free()
 

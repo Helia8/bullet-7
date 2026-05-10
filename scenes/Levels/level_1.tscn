@@ -1,10 +1,12 @@
 [gd_scene format=4 uid="uid://bn15n70pu3nlb"]
 
 [ext_resource type="Script" uid="uid://daq7sbg38d6tp" path="res://src/Levels/level_1.gd" id="1_vn7o3"]
+[ext_resource type="PackedScene" path="res://scenes/Interactables/AllyWorkStation.tscn" id="3_7u17y"]
 [ext_resource type="Texture2D" uid="uid://dgrw7e7uwhlec" path="res://assets/atlas.png" id="3_j85eu"]
 [ext_resource type="PackedScene" uid="uid://d1qk5afk6exhw" path="res://scenes/player.tscn" id="3_kx6l7"]
 [ext_resource type="PackedScene" uid="uid://0ct86ofnipqt" path="res://scenes/Ennemies/DefaultEnnemy.tscn" id="4_enemy"]
 [ext_resource type="Texture2D" uid="uid://x7rs281g2qr5" path="res://assets/ui/ui_ally_shieldguy.png" id="4_vtd0g"]
+[ext_resource type="PackedScene" path="res://scenes/Interactables/CoffeeWorkStation.tscn" id="5_a60bd"]
 [ext_resource type="Texture2D" uid="uid://bhbflrp2a61my" path="res://assets/placeholders/temp_mainroom.png" id="5_fkdrv"]
 [ext_resource type="Texture2D" uid="uid://ba0w6s1o5f0er" path="res://assets/ui/ui_ally_unlocked.png" id="5_hk2jt"]
 [ext_resource type="PackedScene" uid="uid://c8rhe3s01lg77" path="res://scenes/WorkStations/DefaultWorkStation.tscn" id="5_o21ul"]
@@ -1171,6 +1173,10 @@ sources/1 = SubResource("TileSetAtlasSource_j85eu")
 
 [node name="Level1" type="Node2D" unique_id=1897336495]
 script = ExtResource("1_vn7o3")
+ENEMY_SCENE = ExtResource("4_enemy")
+ALLY_WS_SCENE = ExtResource("3_7u17y")
+SHIELD_ALLY_SCENE = ExtResource("9_xxpsm")
+COFFEE_WS_SCENE = ExtResource("5_a60bd")
 destruction_time_range = Vector2(1, 3.1)
 tile_destruction_time = 2.0
 metadata/_custom_type_script = "uid://nds5shxeohgi"
@@ -1247,16 +1253,18 @@ z_index = 0
 position = Vector2(2778, 2335)
 
 [node name="Door" parent="." unique_id=192984226 instance=ExtResource("6_y368g")]
-position = Vector2(4789, 2602)
+position = Vector2(3470, 2588)
 next_level = ExtResource("7_l5ivm")
 
 [node name="Items" type="Node2D" parent="." unique_id=1924918236]
 
 [node name="UiHealth0" type="Sprite2D" parent="." unique_id=139522742]
+visible = false
 position = Vector2(3390, 3338)
 texture = ExtResource("13_5gowt")
 
 [node name="UiXp1Frame1" type="Sprite2D" parent="." unique_id=65628978]
+visible = false
 position = Vector2(3390, 3266)
 texture = ExtResource("14_7u17y")
 
