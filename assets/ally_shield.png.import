@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ciymicrglt1kh"
-path="res://.godot/imported/ui_playerhealth.png-3d296152c4091f5ecd7f3392e03fb488.ctex"
+uid="uid://7mvi447iqwko"
+path="res://.godot/imported/ally_shield.png-8cef1d1e02b0db19536c1bb31fc3cdac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui_playerhealth.png"
-dest_files=["res://.godot/imported/ui_playerhealth.png-3d296152c4091f5ecd7f3392e03fb488.ctex"]
+source_file="res://assets/ally_shield.png"
+dest_files=["res://.godot/imported/ally_shield.png-8cef1d1e02b0db19536c1bb31fc3cdac.ctex"]
 
 [params]
 

@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dgrw7e7uwhlec" path="res://assets/atlas.png" id="3_j85eu"]
 [ext_resource type="PackedScene" uid="uid://d1qk5afk6exhw" path="res://scenes/player.tscn" id="3_kx6l7"]
 [ext_resource type="PackedScene" uid="uid://0ct86ofnipqt" path="res://scenes/Ennemies/DefaultEnnemy.tscn" id="4_enemy"]
-[ext_resource type="Texture2D" uid="uid://bhbflrp2a61my" path="res://assets/temp_mainroom.png" id="5_fkdrv"]
+[ext_resource type="Texture2D" uid="uid://bhbflrp2a61my" path="res://assets/placeholders/temp_mainroom.png" id="5_fkdrv"]
 [ext_resource type="PackedScene" uid="uid://c8rhe3s01lg77" path="res://scenes/WorkStations/DefaultWorkStation.tscn" id="5_o21ul"]
 [ext_resource type="PackedScene" uid="uid://qjwbnsucsc33" path="res://scenes/Interactables/Door.tscn" id="6_y368g"]
 [ext_resource type="PackedScene" uid="uid://bfuivtfate2mm" path="res://scenes/Levels/level_2.tscn" id="7_l5ivm"]
@@ -1216,5 +1216,5 @@ z_index = 0
 position = Vector2(2778, 2335)
 
 [node name="Door" parent="." unique_id=192984226 instance=ExtResource("6_y368g")]
-position = Vector2(4571, 2519)
+position = Vector2(4789, 2602)
 next_level = ExtResource("7_l5ivm")

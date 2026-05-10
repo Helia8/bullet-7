@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bk8gccf0so60j"]
 
 [ext_resource type="Script" uid="uid://c4huo0kdcxs1b" path="res://src/Allies/ShieldAlly.gd" id="1_oh1dw"]
-[ext_resource type="Texture2D" uid="uid://bed1g58bnim8r" path="res://assets/temp_ally.png" id="2_d873u"]
+[ext_resource type="Texture2D" uid="uid://7mvi447iqwko" path="res://assets/ally_shield.png" id="2_oh1dw"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c2cts"]
 radius = 111.0
@@ -17,4 +17,4 @@ shape = SubResource("CapsuleShape2D_c2cts")
 
 [node name="TempAlly" type="Sprite2D" parent="." unique_id=927058879]
 position = Vector2(-5, 3)
-texture = ExtResource("2_d873u")
+texture = ExtResource("2_oh1dw")

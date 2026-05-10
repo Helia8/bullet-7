@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bed1g58bnim8r"
-path="res://.godot/imported/temp_ally.png-ca6ae294df17d7e224d6e55ae1a2dfcc.ctex"
+uid="uid://ciymicrglt1kh"
+path="res://.godot/imported/ui_playerhealth.png-cb4d029380b9332e02d0c0b231e67eb5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/temp_ally.png"
-dest_files=["res://.godot/imported/temp_ally.png-ca6ae294df17d7e224d6e55ae1a2dfcc.ctex"]
+source_file="res://assets/placeholders/ui_playerhealth.png"
+dest_files=["res://.godot/imported/ui_playerhealth.png-cb4d029380b9332e02d0c0b231e67eb5.ctex"]
 
 [params]
 

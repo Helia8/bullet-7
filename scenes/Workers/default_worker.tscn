@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cof7hd53qqgg6"]
 
 [ext_resource type="Script" uid="uid://rrab00ifsxm7" path="res://src/Workers/DefaultWorker.gd" id="1_op575"]
-[ext_resource type="Texture2D" uid="uid://df7yu2su1uqcx" path="res://assets/temp_worker.png" id="2_81xdg"]
+[ext_resource type="Texture2D" uid="uid://df7yu2su1uqcx" path="res://assets/placeholders/temp_worker.png" id="2_81xdg"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_op575"]
 radius = 78.0

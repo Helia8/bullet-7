@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vm46m58u4ylk"
-path="res://.godot/imported/ui_ally_cooldown.png-06510777b706efb604288b0a6407c042.ctex"
+uid="uid://o3vrlqto88qb"
+path="res://.godot/imported/temp_workstation_printer.png-a6e00d8e9af9b31dacaaa2349f2a22ee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui_ally_cooldown.png"
-dest_files=["res://.godot/imported/ui_ally_cooldown.png-06510777b706efb604288b0a6407c042.ctex"]
+source_file="res://assets/placeholders/temp_workstation_printer.png"
+dest_files=["res://.godot/imported/temp_workstation_printer.png-a6e00d8e9af9b31dacaaa2349f2a22ee.ctex"]
 
 [params]
 

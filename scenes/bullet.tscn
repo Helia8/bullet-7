@@ -1,9 +1,12 @@
 [gd_scene format=3 uid="uid://cjf3fwnp2m6bb"]
 
 [ext_resource type="Script" uid="uid://dfqqx2x2ydoas" path="res://src/Bullets/bullet.gd" id="1_y25gk"]
-[ext_resource type="Texture2D" uid="uid://p6pk7t451w8w" path="res://assets/temp_proj1.png" id="2_qncy5"]
-[ext_resource type="Texture2D" uid="uid://cifpg2jnpv03a" path="res://assets/temp_proj2.png" id="3_tamys"]
-[ext_resource type="Texture2D" uid="uid://dc1acp8eb0gxf" path="res://assets/temp_proj3.png" id="4_26lx3"]
+[ext_resource type="Texture2D" uid="uid://bvne01bgwe28a" path="res://assets/proj1.png" id="2_26lx3"]
+[ext_resource type="Texture2D" uid="uid://c12ypca0bdjgi" path="res://assets/proj2.png" id="3_1cfmv"]
+[ext_resource type="Texture2D" uid="uid://dkqskuw2hd780" path="res://assets/proj3.png" id="4_k76ql"]
+[ext_resource type="Texture2D" uid="uid://e0mnpmre6kq" path="res://assets/proj4.png" id="5_in4mv"]
+[ext_resource type="Texture2D" uid="uid://cyru5h2bokth5" path="res://assets/proj5.png" id="6_s437g"]
+[ext_resource type="Texture2D" uid="uid://m2cm42obrm3y" path="res://assets/proj6.png" id="7_iqq7w"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_v8qja"]
 radius = 25.019993
@@ -13,7 +16,7 @@ z_index = 3
 collision_layer = 4
 collision_mask = 10
 script = ExtResource("1_y25gk")
-bullet_textures = Array[Texture2D]([ExtResource("2_qncy5"), ExtResource("3_tamys"), ExtResource("4_26lx3")])
+bullet_textures = Array[Texture2D]([ExtResource("2_26lx3"), ExtResource("3_1cfmv"), ExtResource("4_k76ql"), ExtResource("5_in4mv"), ExtResource("6_s437g"), ExtResource("7_iqq7w")])
 
 [node name="BulletCollision" type="CollisionShape2D" parent="." unique_id=954402881]
 shape = SubResource("CircleShape2D_v8qja")

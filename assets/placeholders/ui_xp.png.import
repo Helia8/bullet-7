@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://df7yu2su1uqcx"
-path="res://.godot/imported/temp_worker.png-8d267a57402974c0cad317d75f20202c.ctex"
+uid="uid://cvdnki7uvpl4t"
+path="res://.godot/imported/ui_xp.png-c7caadb39b96ebe7466d2d210cb288eb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/temp_worker.png"
-dest_files=["res://.godot/imported/temp_worker.png-8d267a57402974c0cad317d75f20202c.ctex"]
+source_file="res://assets/placeholders/ui_xp.png"
+dest_files=["res://.godot/imported/ui_xp.png-c7caadb39b96ebe7466d2d210cb288eb.ctex"]
 
 [params]
 
