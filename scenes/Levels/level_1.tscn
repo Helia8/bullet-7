@@ -4,13 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://dgrw7e7uwhlec" path="res://assets/atlas.png" id="3_j85eu"]
 [ext_resource type="PackedScene" uid="uid://d1qk5afk6exhw" path="res://scenes/player.tscn" id="3_kx6l7"]
 [ext_resource type="PackedScene" uid="uid://0ct86ofnipqt" path="res://scenes/Ennemies/DefaultEnnemy.tscn" id="4_enemy"]
-<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://x7rs281g2qr5" path="res://assets/ui_ally_shieldguy.png" id="4_vtd0g"]
 [ext_resource type="Texture2D" uid="uid://bhbflrp2a61my" path="res://assets/temp_mainroom.png" id="5_fkdrv"]
 [ext_resource type="Texture2D" uid="uid://ba0w6s1o5f0er" path="res://assets/ui_ally_unlocked.png" id="5_hk2jt"]
-=======
 [ext_resource type="Texture2D" uid="uid://bhbflrp2a61my" path="res://assets/placeholders/temp_mainroom.png" id="5_fkdrv"]
->>>>>>> a340286db994907dd9edbb28dce1ca791fe9f019
 [ext_resource type="PackedScene" uid="uid://c8rhe3s01lg77" path="res://scenes/WorkStations/DefaultWorkStation.tscn" id="5_o21ul"]
 [ext_resource type="Texture2D" uid="uid://dgsh4dod6egs5" path="res://assets/ui/temp_counterjobs.png" id="6_5gowt"]
 [ext_resource type="PackedScene" uid="uid://qjwbnsucsc33" path="res://scenes/Interactables/Door.tscn" id="6_y368g"]
@@ -1251,11 +1248,7 @@ z_index = 0
 position = Vector2(2778, 2335)
 
 [node name="Door" parent="." unique_id=192984226 instance=ExtResource("6_y368g")]
-<<<<<<< HEAD
-position = Vector2(5055, 2498)
-=======
 position = Vector2(4789, 2602)
->>>>>>> a340286db994907dd9edbb28dce1ca791fe9f019
 next_level = ExtResource("7_l5ivm")
 
 [node name="Items" type="Node2D" parent="." unique_id=1924918236]

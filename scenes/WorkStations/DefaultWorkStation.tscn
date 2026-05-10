@@ -2,11 +2,8 @@
 
 [ext_resource type="Script" uid="uid://bh6upmp3fqkc5" path="res://src/Interactables/DefaultWorkStation.gd" id="1_script"]
 [ext_resource type="Script" uid="uid://dnu7jnuqvh0l5" path="res://src/Interactables/WorkStationProgressBar.gd" id="2_bar"]
-<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://bpvnhpd6dkcfp" path="res://assets/workstation.png" id="2_ejdgq"]
-=======
 [ext_resource type="Texture2D" uid="uid://bxw3cvkhl5qg6" path="res://assets/item_workstation.png" id="2_ejdgq"]
->>>>>>> a340286db994907dd9edbb28dce1ca791fe9f019
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_zone"]
 radius = 150.0
