@@ -5,17 +5,18 @@ class_name IEnnemy
 @export var max_health: int
 @export var speed: float
 @export var bullet_scene: PackedScene
+@export var item_path: NodePath
 var health := 0
 var bullet_container = null
 var player_ref: Node2D = null
-
+var items : Node2D
 func set_bullet_container(container):
 	bullet_container = container
 
 func _ready() -> void:
 	health = max_health
 	add_to_group("enemies")
-
+	items = get_node(item_path)
 
 func _process(delta: float) -> void:
 	pass

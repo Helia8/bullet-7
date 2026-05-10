@@ -8,6 +8,7 @@ extends CharacterBody2D
 @export var max_health := 100
 var health := 100
 var cooldown := 0.0
+@export var gold: int = 0
 
 
 func _ready() -> void:
@@ -49,6 +50,23 @@ func hit(damage: int) -> void:
 	print("Player hit! Health: ", health)
 	if health <= 0:
 		die()
+
+
+func get_gold() -> int:
+	return gold
+
+func add_gold(amount):
+	gold += amount
+	print("Gold: ", gold)
+
+func remove_gold(amount):
+	gold = max(gold - amount, 0)
+	print("Gold: ", gold)
+
+func set_fire_rate(new_fire_rate: float) -> void:
+	fire_rate = new_fire_rate
+func get_fire_rate() -> float:
+	return fire_rate
 
 
 func die() -> void:

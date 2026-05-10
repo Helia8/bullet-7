@@ -4,7 +4,7 @@ extends IEnnemy
 @export var range_tolerance: float = 60.0
 @export var fire_rate: float = 2.0
 var cooldown := 0.0
-
+@export var dropped_item_scene: PackedScene
 var inv = -1
 
 func _ready() -> void:
@@ -66,4 +66,8 @@ func hit(damage: int) -> void:
 
 
 func die() -> void:
+	if dropped_item_scene:
+		var dropped_item = dropped_item_scene.instantiate()
+		dropped_item.global_position = global_position
+		items.add_child(dropped_item)
 	queue_free()

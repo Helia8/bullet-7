@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://5bwdbuxggv3j"]
+
+[ext_resource type="Script" uid="uid://c77crpspj5rvo" path="res://src/Items/CoffeePickup.gd" id="1_qesmv"]
+[ext_resource type="Texture2D" uid="uid://vvs72ibuvmf6" path="res://assets/powerup_coffee.png" id="2_l6l6b"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7lxgf"]
+radius = 37.215588
+
+[node name="CoffeeItem" type="Node2D" unique_id=631208453]
+script = ExtResource("1_qesmv")
+metadata/_custom_type_script = "uid://3xw4vwuhdrcm"
+
+[node name="PowerupCoffeeSprite" type="Sprite2D" parent="." unique_id=541834843]
+texture = ExtResource("2_l6l6b")
+
+[node name="PickupArea" type="Area2D" parent="." unique_id=708419673]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickupArea" unique_id=1313954409]
+shape = SubResource("CircleShape2D_7lxgf")
+
+[connection signal="body_entered" from="PickupArea" to="." method="_on_pickup_area_body_entered"]
