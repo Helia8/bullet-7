@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cio1rbtmn800c"]
+
+[ext_resource type="Script" uid="uid://heuxbqnnux57" path="res://src/UI/StartMenu.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://fxjh5gwei1fi" path="res://assets/menus/ui_start.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://nfklaygbqqmv" path="res://assets/menus/ui_start_startbutton.png" id="3"]
+
+[node name="StartMenu" type="CanvasLayer" unique_id=1682407758]
+script = ExtResource("1")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=770559524]
+position = Vector2(960, 540)
+texture = ExtResource("2")
+
+[node name="PlayButton" type="TextureButton" parent="." unique_id=356184441]
+offset_left = 730.0
+offset_top = 580.0
+offset_right = 1190.0
+offset_bottom = 700.0
+texture_normal = ExtResource("3")
+
+[node name="QuitButton" type="Button" parent="." unique_id=810689602]
+offset_left = 786.0
+offset_top = 713.0
+offset_right = 1086.0
+offset_bottom = 773.0
+text = "QUIT"

@@ -1,19 +1,23 @@
 extends CharacterBody2D
+
+signal player_died
+
 @export var bullets_path: NodePath
 @onready var bullets_container: Node = get_node(bullets_path)
 
 @export var speed := 300.0
 @export var bullet_scene: PackedScene
 @export var fire_rate := 1.0
-@export var max_health := 100
-var health := 100
+@export var max_health := 5
+var health := 5
 var cooldown := 0.0
 @export var gold: int = 0
 
 
 func _ready() -> void:
 	add_to_group("player")
-	health = max_health
+	PlayerData.apply_to_player(self)
+	_notify_hud_hp()
 
 
 func _process(delta):
@@ -32,6 +36,7 @@ func _physics_process(_delta):
 
 
 func shoot() -> void:
+	print("player pos is ", global_position)
 	var bullet: Node = bullet_scene.instantiate()
 	bullet.global_position = global_position
 	bullet.direction = compute_direction_vector()
@@ -47,9 +52,15 @@ func compute_direction_vector() -> Vector2:
 
 func hit(damage: int) -> void:
 	health -= damage
-	print("Player hit! Health: ", health)
+	_notify_hud_hp()
 	if health <= 0:
 		die()
+
+
+func _notify_hud_hp() -> void:
+	var hud = get_tree().get_first_node_in_group("hud")
+	if hud:
+		hud.update_hp(health)
 
 
 func get_gold() -> int:
@@ -57,11 +68,15 @@ func get_gold() -> int:
 
 func add_gold(amount):
 	gold += amount
-	print("Gold: ", gold)
+	var hud = get_tree().get_first_node_in_group("hud")
+	if hud:
+		hud.update_gold(gold)
 
 func remove_gold(amount):
 	gold = max(gold - amount, 0)
-	print("Gold: ", gold)
+	var hud = get_tree().get_first_node_in_group("hud")
+	if hud:
+		hud.update_gold(gold)
 
 func set_fire_rate(new_fire_rate: float) -> void:
 	fire_rate = new_fire_rate
@@ -70,5 +85,6 @@ func get_fire_rate() -> float:
 
 
 func die() -> void:
-	print("Player died!")
-	queue_free()
+	set_process(false)
+	set_physics_process(false)
+	player_died.emit()

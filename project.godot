@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="bullet-jam"
-run/main_scene="uid://drlow1coxbvx4"
+run/main_scene="res://scenes/UI/StartMenu.tscn"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://assets/icon.svg"
 
@@ -19,6 +19,10 @@ config/icon="res://assets/icon.svg"
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+
+[autoload]
+
+PlayerData="*res://src/Autoloads/PlayerData.gd"
 
 [dotnet]
 

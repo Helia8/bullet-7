@@ -1,4 +1,5 @@
 extends IWorkStation
+class_name DefaultWorkStation
 
 
 @onready var _sprite: Sprite2D = $Sprite2D
@@ -7,6 +8,7 @@ extends IWorkStation
 
 
 func _ready() -> void:
+	add_to_group("workstations")
 	if station_texture:
 		_sprite.texture = station_texture
 		_sprite.z_index = 0

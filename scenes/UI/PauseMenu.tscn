@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://cjr7bt58jbmn6"]
+
+[ext_resource type="Script" uid="uid://t4l4bg7lgqls" path="res://src/UI/PauseMenu.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://bu2jeiykhlk6" path="res://assets/menus/ui_pause.png" id="2"]
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=1221997580]
+layer = 5
+visible = false
+script = ExtResource("1")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=350235678]
+position = Vector2(960, 540)
+texture = ExtResource("2")
+
+[node name="ResumeButton" type="Button" parent="." unique_id=1905187092]
+offset_left = 813.0
+offset_top = 362.0
+offset_right = 1113.0
+offset_bottom = 432.0
+text = "RESUME"
+
+[node name="QuitButton" type="Button" parent="." unique_id=63802952]
+offset_left = 815.0
+offset_top = 650.0
+offset_right = 1115.0
+offset_bottom = 720.0
+text = "QUIT TO MENU"

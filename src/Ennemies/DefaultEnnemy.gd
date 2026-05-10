@@ -66,7 +66,8 @@ func hit(damage: int) -> void:
 
 
 func die() -> void:
-	if dropped_item_scene:
+	died.emit()
+	if dropped_item_scene and items:
 		var dropped_item = dropped_item_scene.instantiate()
 		dropped_item.global_position = global_position
 		items.add_child(dropped_item)
