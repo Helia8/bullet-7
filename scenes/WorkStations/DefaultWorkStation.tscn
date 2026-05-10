@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bxw3cvkhl5qg6" path="res://assets/item_workstation.png" id="2_ejdgq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_zone"]
-radius = 150.0
+radius = 92.00543
 
 [node name="DefaultWorkStation" type="Node2D" unique_id=1484429942]
 z_index = 1
@@ -14,7 +14,6 @@ station_texture = ExtResource("2_ejdgq")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1808135851]
 position = Vector2(16.000023, -3.9999924)
-scale = Vector2(1.6795263, 1.5325757)
 
 [node name="InteractionZone" type="Area2D" parent="." unique_id=655877501]
 

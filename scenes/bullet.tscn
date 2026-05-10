@@ -7,16 +7,17 @@
 [ext_resource type="Texture2D" uid="uid://e0mnpmre6kq" path="res://assets/proj4.png" id="5_in4mv"]
 [ext_resource type="Texture2D" uid="uid://cyru5h2bokth5" path="res://assets/proj5.png" id="6_s437g"]
 [ext_resource type="Texture2D" uid="uid://m2cm42obrm3y" path="res://assets/proj6.png" id="7_iqq7w"]
+[ext_resource type="Texture2D" uid="uid://ce377wbxku58y" path="res://assets/proj7.png" id="8_1cfmv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_v8qja"]
-radius = 25.019993
+radius = 20.024984
 
 [node name="Bullet" type="Area2D" unique_id=787698936]
 z_index = 3
 collision_layer = 4
 collision_mask = 10
 script = ExtResource("1_y25gk")
-bullet_textures = Array[Texture2D]([ExtResource("2_26lx3"), ExtResource("3_1cfmv"), ExtResource("4_k76ql"), ExtResource("5_in4mv"), ExtResource("6_s437g"), ExtResource("7_iqq7w")])
+bullet_textures = Array[Texture2D]([ExtResource("2_26lx3"), ExtResource("3_1cfmv"), ExtResource("4_k76ql"), ExtResource("5_in4mv"), ExtResource("6_s437g"), ExtResource("7_iqq7w"), ExtResource("8_1cfmv")])
 
 [node name="BulletCollision" type="CollisionShape2D" parent="." unique_id=954402881]
 shape = SubResource("CircleShape2D_v8qja")

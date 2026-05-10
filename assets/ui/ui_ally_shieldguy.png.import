@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bc5xtjt64gx35"
-path="res://.godot/imported/temp_gold.jpg-804e5724332c8515da058ae98cdf7fbf.ctex"
+uid="uid://x7rs281g2qr5"
+path="res://.godot/imported/ui_ally_shieldguy.png-c66171c7031ec50fbd811ea609203921.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/temp_gold.jpg"
-dest_files=["res://.godot/imported/temp_gold.jpg-804e5724332c8515da058ae98cdf7fbf.ctex"]
+source_file="res://assets/ui/ui_ally_shieldguy.png"
+dest_files=["res://.godot/imported/ui_ally_shieldguy.png-c66171c7031ec50fbd811ea609203921.ctex"]
 
 [params]
 

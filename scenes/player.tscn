@@ -5,8 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://dwu84a6bg71pc" path="res://assets/player_model.png" id="3_qhqgy"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_onrkg"]
-radius = 62.0
-height = 216.0
+radius = 45.0
+height = 166.0
 
 [node name="PlayerCharacter" type="CharacterBody2D" unique_id=1977532338]
 z_index = 2
