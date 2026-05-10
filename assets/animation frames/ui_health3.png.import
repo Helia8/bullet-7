@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ba0w6s1o5f0er"
-path="res://.godot/imported/ui_ally_unlocked.png-bc618c2380030cbf0276cfd669c62d80.ctex"
+uid="uid://mfam3df2dvdf"
+path="res://.godot/imported/ui_health3.png-53d112c20dc72b418e19332976c39c2a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui_ally_unlocked.png"
-dest_files=["res://.godot/imported/ui_ally_unlocked.png-bc618c2380030cbf0276cfd669c62d80.ctex"]
+source_file="res://assets/animation frames/ui_health3.png"
+dest_files=["res://.godot/imported/ui_health3.png-53d112c20dc72b418e19332976c39c2a.ctex"]
 
 [params]
 

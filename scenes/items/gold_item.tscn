@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ju1jn3sgl60d"]
 
 [ext_resource type="Script" uid="uid://coohhuux7b6av" path="res://src/Items/GoldPickup.gd" id="1_5k8vk"]
-[ext_resource type="Texture2D" uid="uid://bc5xtjt64gx35" path="res://assets/temp_gold.jpg" id="2_ihsh5"]
+[ext_resource type="Texture2D" uid="uid://bc5xtjt64gx35" path="res://assets/placeholders/temp_gold.jpg" id="2_ihsh5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vwwiq"]
 radius = 155.32225
