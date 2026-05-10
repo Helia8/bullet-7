@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cf1yl415jvgvg"]
 
 [ext_resource type="Script" uid="uid://nds5shxeohgi" path="res://src/Interfaces/ILevel.gd" id="1_0n1tn"]
-[ext_resource type="Texture2D" uid="uid://776nc40r4mw7" path="res://assets/game_main.png" id="2_oox4p"]
+[ext_resource type="Texture2D" uid="uid://776nc40r4mw7" path="res://assets/placeholders/game_main.png" id="2_oox4p"]
 [ext_resource type="PackedScene" uid="uid://d1qk5afk6exhw" path="res://scenes/player.tscn" id="3_k2uud"]
 
 [node name="Level" type="Node2D" unique_id=917201245]

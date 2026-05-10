@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://robyic7grrl1"
-path="res://.godot/imported/temp_door_close.png-a60702dd3a51d37e0eceac29fd185a93.ctex"
+uid="uid://o3vrlqto88qb"
+path="res://.godot/imported/temp_workstation_printer.png-a6e00d8e9af9b31dacaaa2349f2a22ee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/temp_door_close.png"
-dest_files=["res://.godot/imported/temp_door_close.png-a60702dd3a51d37e0eceac29fd185a93.ctex"]
+source_file="res://assets/placeholders/temp_workstation_printer.png"
+dest_files=["res://.godot/imported/temp_workstation_printer.png-a6e00d8e9af9b31dacaaa2349f2a22ee.ctex"]
 
 [params]
 

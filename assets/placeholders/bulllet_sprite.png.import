@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://df7yu2su1uqcx"
-path="res://.godot/imported/temp_worker.png-8d267a57402974c0cad317d75f20202c.ctex"
+uid="uid://cfx1m3su56d7d"
+path="res://.godot/imported/bulllet_sprite.png-a19575a3ed41ae6b7168f86bc067180d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/temp_worker.png"
-dest_files=["res://.godot/imported/temp_worker.png-8d267a57402974c0cad317d75f20202c.ctex"]
+source_file="res://assets/placeholders/bulllet_sprite.png"
+dest_files=["res://.godot/imported/bulllet_sprite.png-a19575a3ed41ae6b7168f86bc067180d.ctex"]
 
 [params]
 

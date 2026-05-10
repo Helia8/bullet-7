@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bfuivtfate2mm"]
 
 [ext_resource type="Script" uid="uid://72tvffnmsdqa" path="res://src/Levels/level_2.gd" id="1_04sgr"]
-[ext_resource type="Texture2D" uid="uid://776nc40r4mw7" path="res://assets/game_main.png" id="2_pyh4d"]
+[ext_resource type="Texture2D" uid="uid://776nc40r4mw7" path="res://assets/placeholders/game_main.png" id="2_pyh4d"]
 [ext_resource type="PackedScene" uid="uid://d1qk5afk6exhw" path="res://scenes/player.tscn" id="3_3s172"]
 [ext_resource type="PackedScene" uid="uid://0ct86ofnipqt" path="res://scenes/Ennemies/DefaultEnnemy.tscn" id="4_enemy"]
 

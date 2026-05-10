@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ciymicrglt1kh"
-path="res://.godot/imported/ui_playerhealth.png-3d296152c4091f5ecd7f3392e03fb488.ctex"
+uid="uid://vm46m58u4ylk"
+path="res://.godot/imported/ui_ally_cooldown.png-e34d708621c5d5f4d209657af1a66a0c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui_playerhealth.png"
-dest_files=["res://.godot/imported/ui_playerhealth.png-3d296152c4091f5ecd7f3392e03fb488.ctex"]
+source_file="res://assets/placeholders/ui_ally_cooldown.png"
+dest_files=["res://.godot/imported/ui_ally_cooldown.png-e34d708621c5d5f4d209657af1a66a0c.ctex"]
 
 [params]
 

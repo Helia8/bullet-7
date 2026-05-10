@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cifpg2jnpv03a"
-path="res://.godot/imported/temp_proj2.png-89a56276410f701c86f429f3dafdc576.ctex"
+uid="uid://dd1m76qfnt0fu"
+path="res://.godot/imported/tile_crumbling.png-da529cdaf707b0443125a372c64c1663.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/temp_proj2.png"
-dest_files=["res://.godot/imported/temp_proj2.png-89a56276410f701c86f429f3dafdc576.ctex"]
+source_file="res://assets/tile_crumbling.png"
+dest_files=["res://.godot/imported/tile_crumbling.png-da529cdaf707b0443125a372c64c1663.ctex"]
 
 [params]
 
