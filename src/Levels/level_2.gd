@@ -9,7 +9,6 @@ const LEVEL_3_SCENE = preload("res://scenes/Levels/level_3.tscn")
 @onready var bullets = $Bullets
 @onready var player = $Entities/PlayerCharacter
 
-# TUNABLE: XP values
 const BASE_XP: int = 150
 const XP_PER_QUOTA: int = 10
 
@@ -17,26 +16,20 @@ var _wave_manager: WaveManager
 
 
 func _ready() -> void:
-	# Remove pre-placed enemies
 	for child in $Entities.get_children():
 		if child is IEnnemy:
 			child.set_process(false)
 			child.set_physics_process(false)
 			child.queue_free()
-
-	# Add door — TUNABLE: position
 	var door = DOOR_SCENE.instantiate()
 	door.next_level = LEVEL_3_SCENE
 	door.position = Vector2(880, 500)
 	$Entities.add_child(door)
-
-	# Add AllyWorkStation — TUNABLE: position
 	var ws = ALLY_WS_SCENE.instantiate()
 	ws.ally_scene = SHIELD_ALLY_SCENE
 	ws.position = Vector2(500, 350)
 	$Entities.add_child(ws)
 
-	# Wave definitions — TUNABLE: positions, counts
 	var wave1 = [
 		{"scene": ENEMY_SCENE, "pos": Vector2(350, 175)},
 		{"scene": ENEMY_SCENE, "pos": Vector2(600, 200)},

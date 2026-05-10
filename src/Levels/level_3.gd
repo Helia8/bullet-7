@@ -7,8 +7,6 @@ const SHIELD_ALLY_SCENE = preload("res://scenes/Allies/ShieldAlly.tscn")
 
 @onready var bullets = $Bullets
 @onready var player = $Entities/PlayerCharacter
-
-# TUNABLE: XP values
 const BASE_XP: int = 200
 const XP_PER_QUOTA: int = 10
 
@@ -16,13 +14,11 @@ var _wave_manager: WaveManager
 
 
 func _ready() -> void:
-	# Add exit door (next_level = null → WinScreen) — TUNABLE: position
 	var door = DOOR_SCENE.instantiate()
 	door.next_level = null
 	door.position = Vector2(880, 500)
 	$Entities.add_child(door)
 
-	# Add AllyWorkStations — TUNABLE: count and positions
 	var ws1 = ALLY_WS_SCENE.instantiate()
 	ws1.ally_scene = SHIELD_ALLY_SCENE
 	ws1.position = Vector2(400, 300)
@@ -33,7 +29,6 @@ func _ready() -> void:
 	ws2.position = Vector2(700, 300)
 	$Entities.add_child(ws2)
 
-	# Wave definitions — TUNABLE: positions, counts
 	var wave1 = [
 		{"scene": ENEMY_SCENE, "pos": Vector2(350, 175)},
 		{"scene": ENEMY_SCENE, "pos": Vector2(600, 200)},

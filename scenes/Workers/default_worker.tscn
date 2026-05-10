@@ -9,11 +9,11 @@ height = 252.0
 
 [node name="DefaultWorker" type="CharacterBody2D" unique_id=2079299972]
 script = ExtResource("1_op575")
-metadata/_custom_type_script = "uid://cn208ny4ljfn4"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=920495663]
 shape = SubResource("CapsuleShape2D_op575")
 
 [node name="TempWorker" type="Sprite2D" parent="." unique_id=1937157498]
+visible = false
 position = Vector2(1, 2)
 texture = ExtResource("2_81xdg")
