@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://uefx0dyp3kjn" path="res://src/Interactables/Door.gd" id="1_script"]
 [ext_resource type="Texture2D" uid="uid://b2ejlx0cwabg2" path="res://assets/item_door_closed.png" id="2_smxra"]
-[ext_resource type="Texture2D" uid="uid://crmh1o4s31wyn" path="res://assets/item_door_open.png" id="3_inf1a"]
+[ext_resource type="Texture2D" uid="uid://c40kehodf1v3o" path="res://assets/item_ladder.png" id="3_smxra"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5mbro"]
 size = Vector2(109, 244)
@@ -12,11 +12,12 @@ z_index = 1
 script = ExtResource("1_script")
 
 [node name="ClosedSprite" type="Sprite2D" parent="." unique_id=609912158]
+visible = false
 texture = ExtResource("2_smxra")
 
 [node name="OpenSprite" type="Sprite2D" parent="." unique_id=1855607189]
 position = Vector2(0, -43)
-texture = ExtResource("3_inf1a")
+texture = ExtResource("3_smxra")
 
 [node name="DoorCollision" type="CollisionShape2D" parent="." unique_id=2070778006]
 position = Vector2(0.5, 0)
