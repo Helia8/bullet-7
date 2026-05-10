@@ -4,6 +4,7 @@ extends ILevel
 @export var ENEMY_SCENE: PackedScene
 @export var ALLY_WS_SCENE: PackedScene
 @export var SHIELD_ALLY_SCENE: PackedScene
+@export var COFFEE_WS_SCENE: PackedScene
 
 
 @onready var bullets = $Bullets
@@ -46,6 +47,11 @@ func _ready() -> void:
 	ws.ally_scene = SHIELD_ALLY_SCENE
 	ws.position = Vector2(550, 330)
 	$Entities.add_child(ws)
+
+	if COFFEE_WS_SCENE:
+		var coffee_ws = COFFEE_WS_SCENE.instantiate()
+		coffee_ws.position = Vector2(3400, 2300)  # TUNABLE
+		$Entities.add_child(coffee_ws)
 
 	var wave1 = [
 		{"scene": ENEMY_SCENE, "pos": Vector2(3080.174, 2098.125)},

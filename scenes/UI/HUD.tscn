@@ -13,16 +13,16 @@
 
 [node name="HUD" type="CanvasLayer" unique_id=807937075]
 script = ExtResource("1")
-hp_textures = Array[Texture2D]([ExtResource("2_tohwf"), ExtResource("3_e8ns6"), ExtResource("4_m51yh"), ExtResource("5_8d6le"), ExtResource("6_l13vl"), ExtResource("6_l13vl")])
+hp_textures = Array[Texture2D]([ExtResource("6_l13vl"), ExtResource("6_l13vl"), ExtResource("5_8d6le"), ExtResource("4_m51yh"), ExtResource("3_e8ns6"), ExtResource("2_tohwf")])
 xp_textures = Array[Texture2D]([ExtResource("7_663ec"), ExtResource("8_kxwrb"), ExtResource("9_o1axb"), ExtResource("10_i5pcr")])
 
 [node name="HP" type="Node2D" parent="." unique_id=286446436]
-position = Vector2(778, 971)
+position = Vector2(552, 1022)
 
 [node name="HpSprite" type="Sprite2D" parent="HP" unique_id=1424803260]
 
 [node name="XP" type="Node2D" parent="." unique_id=485764445]
-position = Vector2(772, 1031)
+position = Vector2(1339, 1019)
 
 [node name="XpSprite" type="Sprite2D" parent="XP" unique_id=2069937023]
 
