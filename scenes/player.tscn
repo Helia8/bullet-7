@@ -3,10 +3,33 @@
 [ext_resource type="Script" uid="uid://brfvdgxqfm6e0" path="res://src/player.gd" id="1_qhqgy"]
 [ext_resource type="PackedScene" uid="uid://cjf3fwnp2m6bb" path="res://scenes/bullet.tscn" id="2_dqkch"]
 [ext_resource type="Texture2D" uid="uid://dwu84a6bg71pc" path="res://assets/player_model.png" id="3_qhqgy"]
+[ext_resource type="Texture2D" uid="uid://dngslpyw0gicq" path="res://assets/animation frames/player_walk0001.png" id="4_tuyoq"]
+[ext_resource type="Texture2D" uid="uid://df4t22sql31dl" path="res://assets/animation frames/player_walk0002.png" id="5_fjrip"]
+[ext_resource type="Texture2D" uid="uid://dp0morh1d3vsy" path="res://assets/animation frames/player_walk0000.png" id="6_smehm"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_onrkg"]
 radius = 45.0
 height = 166.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ur7pv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_tuyoq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_fjrip")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_tuyoq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_smehm")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
 
 [node name="PlayerCharacter" type="CharacterBody2D" unique_id=1977532338]
 z_index = 2
@@ -21,3 +44,8 @@ shape = SubResource("CapsuleShape2D_onrkg")
 [node name="TempPlayer" type="Sprite2D" parent="." unique_id=676810588]
 position = Vector2(3, -8)
 texture = ExtResource("3_qhqgy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=602180323]
+sprite_frames = SubResource("SpriteFrames_ur7pv")
+animation = &"walk"
+frame_progress = 0.81105286
