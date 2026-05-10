@@ -1,8 +1,5 @@
 extends CanvasLayer
-
-# Populate these arrays in the Inspector (index = HP value: 0=dead … 5=full)
 @export var hp_textures: Array[Texture2D] = []
-# Populate in Inspector (index = rooms cleared: 0=none, 1, 2, 3)
 @export var xp_textures: Array[Texture2D] = []
 
 @onready var hp_sprite: Sprite2D = $HP/HpSprite
@@ -62,5 +59,5 @@ func reset_room_counters() -> void:
 func _refresh_quota() -> void:
 	kills_label.text = "Kills: %d" % _kills
 	jobs_label.text = "Jobs: %d" % _jobs
-	var quota = (_jobs * 3) - _kills
-	quota_label.text = "Quota: %d" % quota
+	var quota = ((_jobs * 3) - _kills) + 1
+	quota_label.text = "Quota: %d / %d" % [_jobs, quota]
