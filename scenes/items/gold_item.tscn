@@ -1,10 +1,34 @@
 [gd_scene format=3 uid="uid://ju1jn3sgl60d"]
 
 [ext_resource type="Script" uid="uid://coohhuux7b6av" path="res://src/Items/GoldPickup.gd" id="1_5k8vk"]
-[ext_resource type="Texture2D" uid="uid://bc5xtjt64gx35" path="res://assets/placeholders/temp_gold.jpg" id="2_ihsh5"]
+[ext_resource type="Texture2D" uid="uid://dqh6oovxn0kd2" path="res://assets/item_money.png" id="2_35bxm"]
+[ext_resource type="Texture2D" uid="uid://cj8oneclotgkl" path="res://assets/animation frames/item_money1.png" id="3_d55kd"]
+[ext_resource type="Texture2D" uid="uid://cbnfg8gb2xg14" path="res://assets/animation frames/item_money2.png" id="4_kuln3"]
+[ext_resource type="Texture2D" uid="uid://b6xl6laasap0h" path="res://assets/animation frames/item_money3.png" id="5_yjkd2"]
+[ext_resource type="Texture2D" uid="uid://ddagmhs5r45es" path="res://assets/animation frames/item_money2_flip.png" id="6_3djya"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vwwiq"]
-radius = 155.32225
+radius = 69.00725
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v0m2g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_d55kd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_kuln3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_yjkd2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_3djya")
+}],
+"loop": true,
+"name": &"spin",
+"speed": 5.0
+}]
 
 [node name="Node2D" type="Node2D" unique_id=1223381772]
 script = ExtResource("1_5k8vk")
@@ -15,7 +39,12 @@ script = ExtResource("1_5k8vk")
 shape = SubResource("CircleShape2D_vwwiq")
 
 [node name="GoldSprite" type="Sprite2D" parent="." unique_id=126400347]
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("2_ihsh5")
+visible = false
+texture = ExtResource("2_35bxm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1364384853]
+sprite_frames = SubResource("SpriteFrames_v0m2g")
+animation = &"spin"
+frame_progress = 0.8920639
 
 [connection signal="body_entered" from="PickupArea" to="." method="_on_pickup_area_body_entered"]

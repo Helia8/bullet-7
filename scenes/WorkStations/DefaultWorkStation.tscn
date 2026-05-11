@@ -3,9 +3,29 @@
 [ext_resource type="Script" uid="uid://bh6upmp3fqkc5" path="res://src/Interactables/DefaultWorkStation.gd" id="1_script"]
 [ext_resource type="Script" uid="uid://dnu7jnuqvh0l5" path="res://src/Interactables/WorkStationProgressBar.gd" id="2_bar"]
 [ext_resource type="Texture2D" uid="uid://bxw3cvkhl5qg6" path="res://assets/item_workstation.png" id="2_ejdgq"]
+[ext_resource type="Texture2D" uid="uid://bnky7tpvf58de" path="res://assets/animation frames/item_workstation-frame-1.png" id="4_nw7lx"]
+[ext_resource type="Texture2D" uid="uid://beq35gpr0b5d7" path="res://assets/animation frames/item_workstation-frame-2.png" id="5_eb1pl"]
+[ext_resource type="Texture2D" uid="uid://vq0xg5k7fudj" path="res://assets/animation frames/item_workstation-frame-3.png" id="6_p3by8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_zone"]
 radius = 92.00543
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j6o8s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_nw7lx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_eb1pl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_p3by8")
+}],
+"loop": true,
+"name": &"working",
+"speed": 5.0
+}]
 
 [node name="DefaultWorkStation" type="Node2D" unique_id=1484429942]
 z_index = 1
@@ -24,3 +44,8 @@ shape = SubResource("CircleShape2D_zone")
 position = Vector2(0, -218)
 script = ExtResource("2_bar")
 bar_height = 40.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=381327039]
+visible = false
+sprite_frames = SubResource("SpriteFrames_j6o8s")
+animation = &"working"
