@@ -4,6 +4,8 @@ signal player_died
 
 @export var bullets_path: NodePath
 @onready var bullets_container: Node = get_node(bullets_path)
+@onready var _anim: AnimatedSprite2D = $AnimatedSprite2D
+@onready var _sprite: Sprite2D = $TempPlayer
 
 @export var speed := 300.0
 @export var bullet_scene: PackedScene
@@ -18,6 +20,7 @@ func _ready() -> void:
 	add_to_group("player")
 	PlayerData.apply_to_player(self)
 	_notify_hud_hp()
+	_sprite.visible = false
 
 
 func _process(delta):
@@ -29,6 +32,12 @@ func _process(delta):
 	var direction: Vector2 = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	velocity = direction * speed
 	move_and_slide()
+	if direction != Vector2.ZERO:
+		_anim.play("walk")
+		if direction.x != 0:
+			_anim.flip_h = direction.x < 0
+	else:
+		_anim.stop()
 
 
 func _physics_process(_delta):

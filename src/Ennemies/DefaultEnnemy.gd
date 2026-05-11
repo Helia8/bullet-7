@@ -5,14 +5,28 @@ extends IEnnemy
 @export var fire_rate: float = 2.0
 var cooldown := 0.0
 @export var dropped_item_scene: PackedScene
+@export var gold_scene: PackedScene
 var inv = -1
+var _spawning: bool = true
+
+@onready var _anim: AnimatedSprite2D = $AnimatedSprite2D
 
 func _ready() -> void:
 	super()
 	player_ref = get_tree().get_first_node_in_group("player")
+	_anim.animation_finished.connect(_on_anim_finished)
+	_anim.play("spawn")
+
+
+func _on_anim_finished() -> void:
+	if _anim.animation == &"spawn":
+		_spawning = false
+		_anim.play("walk")
 
 
 func _process(delta: float) -> void:
+	if _spawning:
+		return
 	cooldown -= delta
 	if player_ref == null:
 		player_ref = get_tree().get_first_node_in_group("player")
@@ -42,6 +56,8 @@ func move() -> void:
 		velocity = Vector2(-to_player.y, to_player.x).normalized() * speed
 		velocity *= inv
 	move_and_slide()
+	if velocity.x != 0:
+		_anim.flip_h = velocity.x < 0
 
 
 func shoot() -> void:
@@ -67,8 +83,14 @@ func hit(damage: int) -> void:
 
 func die() -> void:
 	died.emit()
-	if dropped_item_scene and items:
-		var dropped_item = dropped_item_scene.instantiate()
-		dropped_item.global_position = global_position
-		items.add_child(dropped_item)
+	var drop_parent: Node = items if items else get_parent()
+	if drop_parent:
+		if dropped_item_scene:
+			var coffee = dropped_item_scene.instantiate()
+			coffee.global_position = global_position + Vector2(-20, 0)
+			drop_parent.add_child(coffee)
+		if gold_scene:
+			var gold = gold_scene.instantiate()
+			gold.global_position = global_position + Vector2(20, 0)
+			drop_parent.add_child(gold)
 	queue_free()

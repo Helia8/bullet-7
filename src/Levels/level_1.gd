@@ -1,5 +1,7 @@
 extends ILevel
 
+const TILE_CRUMBLING = preload("res://assets/tile_crumbling.png")
+
 
 @export var ENEMY_SCENE: PackedScene
 @export var ALLY_WS_SCENE: PackedScene
@@ -29,6 +31,7 @@ var room_h: int = 0
 var destroyed_rings: int = 0
 var destroyed_tiles: Dictionary = {}
 var destruction_complete: bool = false
+var _warned_tiles: Dictionary = {}
 
 @export var BASE_XP: int = 100
 @export var XP_PER_QUOTA: int = 10
@@ -139,7 +142,7 @@ func get_ring(depth: int, map_data: Array, evaluate: Callable) -> Array:
 
 
 func is_not_destroyed_and_ground(cell: Vector2) -> bool:
-	if cell in destroyed_tiles:
+	if cell in destroyed_tiles or cell in _warned_tiles:
 		return false
 	var tile_data = tilemap.get_cell_tile_data(cell)
 	return tile_data != null and tile_data.get_custom_data("ground")
@@ -148,15 +151,32 @@ func is_not_destroyed_and_ground(cell: Vector2) -> bool:
 func destroy_tile_in_ring(ring: Array) -> void:
 	if ring.size() == 0:
 		return
-	var tile_to_destroy = [ring[randi() % ring.size()]]
-	tilemap.set_cells_terrain_connect(tile_to_destroy, 0, 1, false)
-	for tile in tile_to_destroy:
-		destroyed_tiles[tile] = true
-	var remaining = ring.filter(func(t): return not t in destroyed_tiles)
+	var chosen: Vector2 = ring[randi() % ring.size()]
+
+	var sprite := Sprite2D.new()
+	sprite.texture = TILE_CRUMBLING
+	sprite.hframes = 4
+	sprite.frame = 0
+	sprite.global_position = tilemap.to_global(tilemap.map_to_local(Vector2i(chosen)))
+	sprite.z_index = 3
+	add_child(sprite)
+	_warned_tiles[chosen] = sprite
+	create_tween().tween_property(sprite, "frame", 3, 1.5).from(0)
+
+	var remaining = ring.filter(func(t): return not t in destroyed_tiles and not t in _warned_tiles)
 	if remaining.size() == 0:
 		destroyed_rings += 1
 		if destroyed_rings >= max_destroyed_rings:
 			destruction_complete = true
+
+	await get_tree().create_timer(1.5).timeout
+	if not is_instance_valid(self):
+		return
+	tilemap.set_cells_terrain_connect([chosen], 0, 1, false)
+	destroyed_tiles[chosen] = true
+	_warned_tiles.erase(chosen)
+	if is_instance_valid(sprite):
+		sprite.queue_free()
 
 
 func get_cell_ring_depth(cell: Vector2, min_x: int, min_y: int, max_x: int, max_y: int) -> int:

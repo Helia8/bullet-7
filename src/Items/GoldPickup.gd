@@ -1,7 +1,11 @@
 extends IItem
 
 @onready var _sprite: Sprite2D = $GoldSprite
+@onready var _anim: AnimatedSprite2D = $AnimatedSprite2D
 @onready var _pickupArea: Area2D = $PickupArea
+
+func _ready() -> void:
+	_anim.play("spin")
 
 func pickup(player: Node2D) -> void:
 	print("player picked up gold")

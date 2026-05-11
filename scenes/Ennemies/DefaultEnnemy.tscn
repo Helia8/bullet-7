@@ -7,12 +7,74 @@
 [ext_resource type="Texture2D" uid="uid://csc5hagi513ux" path="res://assets/animation frames/enemy_manager0001.png" id="5_80q06"]
 [ext_resource type="Texture2D" uid="uid://bd3mtmam4pg5w" path="res://assets/animation frames/enemy_manager0002.png" id="6_r6c3t"]
 [ext_resource type="Texture2D" uid="uid://hc8c52u0n4jo" path="res://assets/animation frames/enemy_manager0000.png" id="7_piuxv"]
+[ext_resource type="PackedScene" uid="uid://ju1jn3sgl60d" path="res://scenes/items/gold_item.tscn" id="8_gold"]
+[ext_resource type="Texture2D" uid="uid://bpfcjvnhp48om" path="res://assets/animation frames/enemyspawn0000.png" id="9_s0"]
+[ext_resource type="Texture2D" uid="uid://b1obcm8ru8leq" path="res://assets/animation frames/enemyspawn0001.png" id="10_s1"]
+[ext_resource type="Texture2D" uid="uid://ksx8orkwsme1" path="res://assets/animation frames/enemyspawn0002.png" id="11_s2"]
+[ext_resource type="Texture2D" uid="uid://b4lqdclm1yeeg" path="res://assets/animation frames/enemyspawn0003.png" id="12_s3"]
+[ext_resource type="Texture2D" uid="uid://3nhcogoilntj" path="res://assets/animation frames/enemyspawn0004.png" id="13_s4"]
+[ext_resource type="Texture2D" uid="uid://c5525el00eg4p" path="res://assets/animation frames/enemyspawn0005.png" id="14_s5"]
+[ext_resource type="Texture2D" uid="uid://dcvhee30l5jvd" path="res://assets/animation frames/enemyspawn0006.png" id="15_s6"]
+[ext_resource type="Texture2D" uid="uid://75hekrrhlwwd" path="res://assets/animation frames/enemyspawn0007.png" id="16_s7"]
+[ext_resource type="Texture2D" uid="uid://dw3ycxck7htqc" path="res://assets/animation frames/enemyspawn0008.png" id="17_s8"]
+[ext_resource type="Texture2D" uid="uid://4g181x15i4td" path="res://assets/animation frames/enemyspawn0009.png" id="18_s9"]
+[ext_resource type="Texture2D" uid="uid://bse41881jf8yw" path="res://assets/animation frames/enemyspawn0010.png" id="19_s10"]
+[ext_resource type="Texture2D" uid="uid://diup6s1iqsyih" path="res://assets/animation frames/enemyspawn0011.png" id="20_s11"]
+[ext_resource type="Texture2D" uid="uid://cxctt688xrhp6" path="res://assets/animation frames/enemyspawn0012.png" id="21_s12"]
+[ext_resource type="Texture2D" uid="uid://crnqjxamwmlfk" path="res://assets/animation frames/enemyspawn0013.png" id="22_s13"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ny4p5"]
 size = Vector2(119, 188)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2kn20"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_s0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_s1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_s2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_s3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_s4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_s5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_s6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_s7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_s8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_s9")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_s10")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_s11")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_s12")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_s13")
+}],
+"loop": false,
+"name": &"spawn",
+"speed": 10.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("5_80q06")
@@ -34,6 +96,7 @@ collision_layer = 2
 collision_mask = 11
 script = ExtResource("1_script")
 dropped_item_scene = ExtResource("2_ny4p5")
+gold_scene = ExtResource("8_gold")
 max_health = 5
 speed = 80.0
 bullet_scene = ExtResource("3_bullet")
@@ -49,5 +112,4 @@ texture = ExtResource("3_qwpen")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=288908365]
 sprite_frames = SubResource("SpriteFrames_2kn20")
-animation = &"walk"
-frame_progress = 0.7761664
+animation = &"spawn"

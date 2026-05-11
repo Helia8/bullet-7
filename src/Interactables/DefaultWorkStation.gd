@@ -5,6 +5,7 @@ class_name DefaultWorkStation
 @onready var _sprite: Sprite2D = $Sprite2D
 @onready var _zone: Area2D = $InteractionZone
 @onready var _bar: Node2D = $ProgressBarNode
+@onready var _anim: AnimatedSprite2D = $AnimatedSprite2D
 
 
 func _ready() -> void:
@@ -40,11 +41,17 @@ func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		_player_inside = true
 		_bar.visible = true
+		_sprite.visible = false
+		_anim.visible = true
+		_anim.play("working")
 
 
 func _on_body_exited(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		_player_inside = false
+		_anim.visible = false
+		_anim.stop()
+		_sprite.visible = true
 		if reset_on_exit:
 			_progress = 0.0
 			_bar.set_value(0.0)
