@@ -1201,22 +1201,27 @@ tile_map_data = PackedByteArray("AAAYAC4AAQABAAEAAAAYAC0AAQABAAEAAAAYADYAAQABAAE
 tile_set = SubResource("TileSet_xxpsm")
 
 [node name="UiAllyShieldguy" type="Sprite2D" parent="Environment" unique_id=513305177]
+visible = false
 position = Vector2(2207, 2127)
 texture = ExtResource("4_vtd0g")
 
 [node name="UiAllyUnlocked2" type="Sprite2D" parent="Environment" unique_id=1068150746]
+visible = false
 position = Vector2(2207, 2389)
 texture = ExtResource("5_hk2jt")
 
 [node name="UiAllyUnlocked3" type="Sprite2D" parent="Environment" unique_id=336350635]
+visible = false
 position = Vector2(2205, 2525)
 texture = ExtResource("5_hk2jt")
 
 [node name="TempCounterjobs" type="Sprite2D" parent="Environment" unique_id=1688010559]
+visible = false
 position = Vector2(3092, 1710)
 texture = ExtResource("6_5gowt")
 
 [node name="TempCounterkills" type="Sprite2D" parent="Environment" unique_id=1697868066]
+visible = false
 position = Vector2(3565, 1707)
 texture = ExtResource("7_7u17y")
 
@@ -1269,5 +1274,6 @@ position = Vector2(3390, 3266)
 texture = ExtResource("14_7u17y")
 
 [node name="UiAllyCooldown" type="Sprite2D" parent="." unique_id=1016040678]
+visible = false
 position = Vector2(2207, 2253)
 texture = ExtResource("15_a60bd")

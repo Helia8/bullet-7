@@ -27,12 +27,14 @@ position = Vector2(1339, 1019)
 [node name="XpSprite" type="Sprite2D" parent="XP" unique_id=2069937023]
 
 [node name="Gold" type="Node2D" parent="." unique_id=1759732260]
+visible = false
 position = Vector2(1700, 60)
 
 [node name="GoldLabel" type="Label" parent="Gold" unique_id=1977551537]
 text = "$ 0"
 
 [node name="Quota" type="Node2D" parent="." unique_id=348413612]
+visible = false
 position = Vector2(60, 940)
 
 [node name="KillsLabel" type="Label" parent="Quota" unique_id=959923474]
